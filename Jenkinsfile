@@ -29,7 +29,9 @@ pipeline{
                   }
                 }
                 stage("test"){
+                steps{
                   echo "test done!"
+                 }
                 }
               }
             }
