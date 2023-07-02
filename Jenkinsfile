@@ -35,16 +35,6 @@ pipeline{
                 }
               }
             }
-                  stage("Five"){
-                          when{
-                                  not{
-                                          branch "main"
-                                  }
-                          }
-                           steps{
-                                   echo "stage five done!"
-                           }       
-                  }
           }
 }
  
