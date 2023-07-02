@@ -35,6 +35,14 @@ pipeline{
                 }
               }
             }
+                  stage("Five"){
+                          when{
+                                  branch "first"
+                          }
+                           steps{
+                                   echo "stage five done!"
+                           }       
+                  }
           }
 }
  
