@@ -21,7 +21,7 @@ pipeline{
                   echo "stage three done!!"
                 }
               }
-            stages("Four"){
+            stage("Four"){
               parallel{
                 stage("build stage"){
                   steps{
