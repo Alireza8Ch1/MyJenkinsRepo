@@ -37,7 +37,9 @@ pipeline{
             }
                   stage("Five"){
                           when{
-                                  branch "main"
+                                  not{
+                                          branch "main"
+                                  }
                           }
                            steps{
                                    echo "stage five done!"
