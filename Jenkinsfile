@@ -1,9 +1,15 @@
 pipeline {
-     options {
-        timeout(time: 10, unit: 'SECONDS') 
-    }
+    
     agent any
     stages {
+        stage("first stage"){
+              options {
+        timeout(time: 10, unit: 'SECONDS') 
+    }
+            steps{
+                echo "first stage running!"
+            }
+        }
         stage('Example') {
             steps {
                 input 'procceed??'
@@ -12,7 +18,7 @@ pipeline {
     }
     post { 
         always { 
-            echo 'I will always say Hello again!'
+            echo 'post section has been run'
         }
     }
 }
