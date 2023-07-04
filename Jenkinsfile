@@ -7,7 +7,7 @@ pipeline {
         timeout(time: 10, unit: 'SECONDS') 
     }
             steps{
-                echo "first stage running!"
+                input 'procceed??'
             }
         }
         stage('Example') {
